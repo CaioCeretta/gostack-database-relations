@@ -47,7 +47,7 @@ class CreateOrderService {
       product => !foundProductsIds.includes(product.id)
     );
 
-    if(inexistentProducts.length) {
+    if(inexistentProducts.length > 0) {
       throw new AppError(`Couldn\'t find any products with ${inexistentProducts[0].id} ids`)
     }
 
@@ -55,7 +55,9 @@ class CreateOrderService {
       product => foundProducts.filter(p => p.id === product.id)[0].quantity <  product.quantity,
     );
 
-    if(productsWithNoStock.length) {
+    console.log(productsWithNoStock.length)
+
+    if(productsWithNoStock.length > 0) {
       throw new AppError(
         `The quantity ${productsWithNoStock[0].quantity} for the product ${productsWithNoStock[0].id} isn\'t avaiable for purchase`
       )
