@@ -5,7 +5,7 @@
   "license": "MIT",
   "scripts": {
     "build": "tsc",
-    "dev:server": "ts-node-dev -r tsconfig-paths/register --inspect --transpileOnly --ignore-watch node_modules src/shared/infra/http/server.ts",
+    "dev:server": "ts-node-dev -r tsconfig-paths/register --inspect --transpile-only --ignore-watch node_modules src/shared/infra/http/server.ts",
     "typeorm": "ts-node-dev  -r tsconfig-paths/register ./node_modules/typeorm/cli.js",
     "test": "cross-env NODE_ENV=test jest"
   },
@@ -14,10 +14,10 @@
     "cross-env": "^7.0.2",
     "express": "^4.17.1",
     "express-async-errors": "^3.1.1",
-    "pg": "^8.3.0",
+    "pg": "8.8.0",
     "reflect-metadata": "^0.1.10",
     "tsyringe": "^4.2.0",
-    "typeorm": "0.2.24"
+    "typeorm": "0.2.45"
   },
   "devDependencies": {
     "@types/cors": "^2.8.6",
@@ -25,8 +25,8 @@
     "@types/jest": "^25.2.1",
     "@types/node": "^8.0.29",
     "@types/supertest": "^2.0.9",
-    "@typescript-eslint/eslint-plugin": "^2.31.0",
-    "@typescript-eslint/parser": "^2.31.0",
+    "@typescript-eslint/eslint-plugin": "^5.48.1",
+    "@typescript-eslint/parser": "^5.48.1",
     "eslint": "^7.0.0",
     "eslint-config-airbnb-base": "^14.1.0",
     "eslint-config-prettier": "^6.11.0",
